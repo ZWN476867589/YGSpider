@@ -1,0 +1,12 @@
+﻿1.获取所有开奖商品:http://www.1yyg.com/lottery/m{pageNum}.html
+pageNum:1~EndNum
+EndNum从第一页中提取
+从divPage em元素中提取EndNum
+通过分析页面源代码，提取出相关信息来。
+2.获取历史购买记录:http://www.1yyg.com/HistoryBuyRecords.html
+使用接口:http://api.1yyg.com/JPData?action=getHistoryBuyRecord&FIdx=1&EIdx=20&BTime={startTime}&ETime={EndTime}&isCount=1&fun=jsonp1445393048837&_=1445393979680
+startTime 和endTime 时间差不能超过1小时
+fun后面的参数为jsonp+时间戳+毫秒
+
+http://api.1yyg.com/JPData?action=getHistoryBuyRecord&FIdx=1&EIdx=20&BTime=2015-10-21%2009:38:00&ETime=2015-10-21%2010:38:59.999&isCount=1&fun=jsonp1445395132729&_=1445395133291
+
