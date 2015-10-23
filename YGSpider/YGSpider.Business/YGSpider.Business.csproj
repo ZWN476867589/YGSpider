@@ -45,6 +45,7 @@
     <Compile Include="UtilTools\EntityHelper.cs" />
     <Compile Include="UtilTools\JsonHelper.cs" />
     <Compile Include="UtilTools\NetHelper.cs" />
+    <Compile Include="UtilTools\SystemHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="YGSpiderDcoument.txt" />

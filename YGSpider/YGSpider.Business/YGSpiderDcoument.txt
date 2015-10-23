@@ -10,3 +10,4 @@ fun后面的参数为jsonp+时间戳+毫秒
 
 http://api.1yyg.com/JPData?action=getHistoryBuyRecord&FIdx=1&EIdx=20&BTime=2015-10-21%2009:38:00&ETime=2015-10-21%2010:38:59.999&isCount=1&fun=jsonp1445395132729&_=1445395133291
 
+3.个人信息页面:http://u.1yyg.com/1009428621

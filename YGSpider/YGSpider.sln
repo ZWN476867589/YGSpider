@@ -6,6 +6,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YGSpider.Business", "YGSpider.Business\YGSpider.Business.csproj", "{6C46835D-036F-4997-A265-2CA728CC465C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YGSpider.DataBase", "YGSpider.DataBase\YGSpider.DataBase.csproj", "{BB463C76-D1D1-4DA7-98EB-5C482B2165C1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6C46835D-036F-4997-A265-2CA728CC465C} = {6C46835D-036F-4997-A265-2CA728CC465C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
