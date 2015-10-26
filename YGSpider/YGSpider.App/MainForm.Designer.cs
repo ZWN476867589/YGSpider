@@ -28,109 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-            this.tcpBuyHistory = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tcpProducts = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.Menu = new System.Windows.Forms.MenuStrip();
+            this.SystemMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.功能FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProductMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.BuyHistoryMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // Menu
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
-            this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tcpBuyHistory);
-            this.tabControl1.Controls.Add(this.tcpProducts);
-            this.tabControl1.Location = new System.Drawing.Point(-7, 1);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedTabFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
-            this.tabControl1.SelectedTabIndex = 1;
-            this.tabControl1.Size = new System.Drawing.Size(872, 478);
-            this.tabControl1.TabIndex = 0;
-            this.tabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.tabControl1.Tabs.Add(this.tabItem1);
-            this.tabControl1.Tabs.Add(this.tabItem2);
+            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SystemMenu,
+            this.功能FToolStripMenuItem,
+            this.AboutMenu});
+            this.Menu.Location = new System.Drawing.Point(0, 0);
+            this.Menu.Name = "Menu";
+            this.Menu.Size = new System.Drawing.Size(859, 25);
+            this.Menu.TabIndex = 1;
+            this.Menu.Text = "menuStrip1";
             // 
-            // tcpBuyHistory
+            // SystemMenu
             // 
-            this.tcpBuyHistory.AutoSize = true;
-            this.tcpBuyHistory.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
-            this.tcpBuyHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcpBuyHistory.Location = new System.Drawing.Point(0, 26);
-            this.tcpBuyHistory.Name = "tcpBuyHistory";
-            this.tcpBuyHistory.Padding = new System.Windows.Forms.Padding(1);
-            this.tcpBuyHistory.Size = new System.Drawing.Size(872, 452);
-            this.tcpBuyHistory.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tcpBuyHistory.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tcpBuyHistory.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tcpBuyHistory.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tcpBuyHistory.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tcpBuyHistory.Style.GradientAngle = 90;
-            this.tcpBuyHistory.TabIndex = 2;
-            this.tcpBuyHistory.TabItem = this.tabItem2;
+            this.SystemMenu.Checked = true;
+            this.SystemMenu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.SystemMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Exit});
+            this.SystemMenu.Name = "SystemMenu";
+            this.SystemMenu.Size = new System.Drawing.Size(59, 21);
+            this.SystemMenu.Text = "系统(&S)";
             // 
-            // tabItem2
+            // Exit
             // 
-            this.tabItem2.AttachedControl = this.tcpBuyHistory;
-            this.tabItem2.Name = "tabItem2";
-            this.tabItem2.Text = "购买记录";
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(116, 22);
+            this.Exit.Text = "退出(&X)";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // tcpProducts
+            // 功能FToolStripMenuItem
             // 
-            this.tcpProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tcpProducts.AutoSize = true;
-            this.tcpProducts.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
-            this.tcpProducts.Location = new System.Drawing.Point(0, 26);
-            this.tcpProducts.Name = "tcpProducts";
-            this.tcpProducts.Padding = new System.Windows.Forms.Padding(1);
-            this.tcpProducts.Size = new System.Drawing.Size(872, 452);
-            this.tcpProducts.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tcpProducts.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tcpProducts.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tcpProducts.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tcpProducts.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tcpProducts.Style.GradientAngle = 90;
-            this.tcpProducts.TabIndex = 1;
-            this.tcpProducts.TabItem = this.tabItem1;
+            this.功能FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ProductMenu,
+            this.BuyHistoryMenu});
+            this.功能FToolStripMenuItem.Name = "功能FToolStripMenuItem";
+            this.功能FToolStripMenuItem.Size = new System.Drawing.Size(58, 21);
+            this.功能FToolStripMenuItem.Text = "功能(&F)";
             // 
-            // tabItem1
+            // ProductMenu
             // 
-            this.tabItem1.AttachedControl = this.tcpProducts;
-            this.tabItem1.Name = "tabItem1";
-            this.tabItem1.Text = "商品";
+            this.ProductMenu.Name = "ProductMenu";
+            this.ProductMenu.Size = new System.Drawing.Size(152, 22);
+            this.ProductMenu.Text = "商品(&P)";
+            this.ProductMenu.Click += new System.EventHandler(this.ProductMenu_Click);
+            // 
+            // BuyHistoryMenu
+            // 
+            this.BuyHistoryMenu.Name = "BuyHistoryMenu";
+            this.BuyHistoryMenu.Size = new System.Drawing.Size(152, 22);
+            this.BuyHistoryMenu.Text = "购买历史(&B)";
+            this.BuyHistoryMenu.Click += new System.EventHandler(this.BuyHistoryMenu_Click);
+            // 
+            // AboutMenu
+            // 
+            this.AboutMenu.Name = "AboutMenu";
+            this.AboutMenu.Size = new System.Drawing.Size(60, 21);
+            this.AboutMenu.Text = "关于(&A)";
+            this.AboutMenu.Click += new System.EventHandler(this.AboutMenu_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 475);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.Menu);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.Menu;
             this.Name = "MainForm";
             this.Text = "云购采集器";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabControl1.PerformLayout();
+            this.Menu.ResumeLayout(false);
+            this.Menu.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevComponents.DotNetBar.TabControl tabControl1;
-        private DevComponents.DotNetBar.TabControlPanel tcpProducts;
-        private DevComponents.DotNetBar.TabItem tabItem1;
-        private DevComponents.DotNetBar.TabControlPanel tcpBuyHistory;
-        private DevComponents.DotNetBar.TabItem tabItem2;
+        private System.Windows.Forms.MenuStrip Menu;
+        private System.Windows.Forms.ToolStripMenuItem SystemMenu;
+        private System.Windows.Forms.ToolStripMenuItem Exit;
+        private System.Windows.Forms.ToolStripMenuItem 功能FToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ProductMenu;
+        private System.Windows.Forms.ToolStripMenuItem BuyHistoryMenu;
+        private System.Windows.Forms.ToolStripMenuItem AboutMenu;
+
     }
 }

@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 
@@ -18,26 +12,46 @@ namespace YGSpider.App
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {   
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose();
+        }
+
+        private void ProductMenu_Click(object sender, EventArgs e)
+        {
+            CloseForms();
             Products product = new Products();
-            product.TopLevel = false;
-            product.Parent = tcpProducts;
-            product.ControlBox = false;
-            product.Dock = DockStyle.Fill;
-            product.Height = tcpProducts.Height;
-            product.Text = "";
+            product.MdiParent = this;
             product.Show();
+        }     
 
-            BuyHistory buyHistory = new BuyHistory();
-            buyHistory.TopLevel = false;
-            buyHistory.Parent = tcpBuyHistory;
-            buyHistory.ControlBox = false;
-            buyHistory.Dock = DockStyle.Fill;
-            buyHistory.Height = tcpProducts.Height;
-            buyHistory.Text = "";
-            buyHistory.Show();
+        private void AboutMenu_Click(object sender, EventArgs e)
+        {
+            CloseForms();
+            About about = new About();
+            about.MdiParent = this;
+            about.WindowState = FormWindowState.Maximized;
+            about.Show();
+        }
 
-            this.tabControl1.SelectedTabIndex = 0;
+        private void BuyHistoryMenu_Click(object sender, EventArgs e)
+        {
+            CloseForms();
+            BuyHistory history = new BuyHistory();
+            history.MdiParent = this;
+            history.Show();
+        }
+        public void CloseForms()
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+                form.Dispose();
+            }
         }
     }
 }
