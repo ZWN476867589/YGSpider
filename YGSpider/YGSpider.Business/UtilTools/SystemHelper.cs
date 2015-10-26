@@ -7,12 +7,12 @@ namespace YGSpider.Business.UtilTools
 {
     public static class SystemHelper
     {
-        public static double GetTimeStamp()
+        public static Int64 GetTimeStamp()
         {
             TimeSpan ts = new TimeSpan();
             DateTime startTime = DateTime.Parse("1970/01/01 00:00:00");
             ts = DateTime.Now - startTime;
-            return ts.TotalMilliseconds;
+            return (Int64)ts.TotalMilliseconds;
         }
         public static Int64 GetTimeStampWithMillisecond()
         {
