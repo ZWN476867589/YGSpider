@@ -39,6 +39,7 @@
             // 
             this.cmbProductType.DisplayMember = "Text";
             this.cmbProductType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbProductType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProductType.FormattingEnabled = true;
             this.cmbProductType.ItemHeight = 15;
             this.cmbProductType.Location = new System.Drawing.Point(93, 11);
@@ -73,6 +74,9 @@
             // 
             // rtbResult
             // 
+            this.rtbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -91,7 +95,7 @@
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Location = new System.Drawing.Point(11, 40);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.Size = new System.Drawing.Size(333, 23);
             this.labelX2.TabIndex = 4;
             this.labelX2.Text = "运行结果:";
             // 
@@ -109,6 +113,7 @@
             this.Name = "Products";
             this.Text = "商品";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Products_FormClosing);
             this.Load += new System.EventHandler(this.Products_Load);
             this.ResumeLayout(false);
 

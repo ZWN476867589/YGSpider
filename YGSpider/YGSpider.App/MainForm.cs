@@ -47,11 +47,11 @@ namespace YGSpider.App
         }
         public void CloseForms()
         {
-            foreach (Form form in this.MdiChildren)
-            {
-                form.Close();
-                form.Dispose();
-            }
+            //foreach (Form form in this.MdiChildren)
+            //{
+            //    form.Close();
+            //    form.Dispose();
+            //}
         }
     }
 }
