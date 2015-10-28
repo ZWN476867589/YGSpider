@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.SQLite;
+using System.Data;
 
 namespace YGSpider.DataBase
 {
@@ -44,6 +45,13 @@ namespace YGSpider.DataBase
             SQLiteCommand cmd = new SQLiteCommand(queryStr, SQLConn);
             SQLiteDataReader reader = cmd.ExecuteReader();
             return reader;
+        }
+        public static DataTable QueryToDataTable(string queryStr)
+        {
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(queryStr,SQLConn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
         }
         public static bool Delete(string sqlStr)
         {
