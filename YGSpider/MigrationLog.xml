@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_MigrationReport_Files/MigrationReport.xslt'?>
+<MigrationLog>
+<Properties>
+<Property Name="Solution" Value="E:\MyCode\YGSpider\trunk\YGSpider\YGSpider.sln"></Property>
+<Property Name="Solution File" Value="E:\MyCode\YGSpider\trunk\YGSpider"></Property>
+<Property Name="Date" Value="2015/10/28 15:43:54"></Property>
+</Properties>
+<Event ErrorLevel="3" Project="YGSpider.DataBase" Source="DB.dbml" Description="File content is not valid."></Event>
+
+</MigrationLog>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="main" EntityNamespace="MainContext" ContextNamespace="MainContext" Class="MainDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="ac8d16e9-96db-472e-90d6-b6c0ae95de5c" Provider="Devart.Data.SQLite.Linq.Provider.SQLiteDataProvider, Devart.Data.SQLite.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=E:\MyCode\YGSpider\trunk\YGSpider\YGSpider.App\YGSpider.db" Provider="Devart.Data.SQLite" />
+  <Table Name="&quot;main&quot;.ProductType" Member="ProductTypes">
+    <Type Name="ProductType" ed:Guid="66863e88-6122-434c-a92b-7b2fe00da465">
+      <Column Name="&quot;RowID&quot;" Member="RowID" Type="System.Int64" DbType="INTEGER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="1" ed:ValidateRequired="true" ed:Guid="a8daecf0-0c27-4441-8d81-5142052e762f" />
+      <Column Name="ProductTypeID" Type="System.Int64" DbType="INTEGER NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="1" ed:ValidateRequired="true" ed:Guid="2e30b80d-25fa-44ce-bd22-482d962f45eb" />
+      <Column Name="ProductTypeName" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="44ec4f7a-e142-458d-a8bd-01719925c83c" />
+      <Column Name="BaseUrl" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="81be0f79-6001-401e-957b-5ca5d7d0ae59" />
+      <Column Name="BaseApiUrl" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="53feb04b-d794-469c-b111-ffd3705d55ab" />
+      <Column Name="RecordCount" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="7abd6531-9c26-4090-ac5a-550af518f18b" />
+      <Column Name="PageSize" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="3223fa8d-6365-4f40-9c2a-31a4089093c3" />
+      <Column Name="StartSellTime" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="30e3abda-8bf3-4cfc-9ef5-8ec1bed83f93" />
+      <Column Name="ModefiedTime" Type="System.String" DbType="TEXT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="3602544a-8c8a-4aab-b298-977cb98c6955" />
+      <Column Name="IsDownloadAll" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="0" ed:ValidateRequired="true" ed:Guid="5d515798-04ab-4c8d-9037-700fde0f4e9b" />
+    </Type>
+  </Table>
+  <Table Name="&quot;main&quot;.ProductPrizeInfo" Member="ProductPrizeInfos">
+    <Type Name="ProductPrizeInfo" ed:Guid="29c087cb-bd66-44b1-92ac-1b8a3b1d0f2d">
+      <Column Name="&quot;RowID&quot;" Member="RowID" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="85cd5a59-7c3b-46ed-8450-9d861df4b900" />
+      <Column Name="ProductTypeID" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="cf9f583b-ab17-4383-94c5-9999ac38d33c" />
+      <Column Name="codeID" Member="CodeID" Type="System.Int64" DbType="INTEGER" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="4c564b9a-2b45-4fbd-b1ac-e553ee2f5d27" />
+      <Column Name="goodsPic" Member="GoodsPic" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="ab502974-3974-4c3c-a4bc-7b2e3af0677c" />
+      <Column Name="goodsName" Member="GoodsName" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="6823bcf7-edc1-4507-9261-1a926f9a0f61" />
+      <Column Name="codePeriod" Member="CodePeriod" Type="System.Int64" DbType="INTEGER" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="3a51e40a-d1e6-47a3-b517-056d4290af63" />
+      <Column Name="codePrice" Member="CodePrice" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="e5e25144-1466-44df-975b-ea773cc7c4d7" />
+      <Column Name="raffTime" Member="RaffTime" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="797a9355-a0fc-4756-a434-6c07c22df7db" />
+      <Column Name="userWeb" Member="UserWeb" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="ab91f1b0-70c5-48f1-a54e-b67d06b20876" />
+      <Column Name="userName" Member="UserName" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="8acad542-79bc-4b98-bd13-1056f8509175" />
+      <Column Name="userPhoto" Member="UserPhoto" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="ea7b3d7e-04df-4a53-ba73-151e0f64f8b5" />
+      <Column Name="userAddr" Member="UserAddr" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="cae9b34d-a3e8-4434-9201-54ac1cc21d7d" />
+      <Column Name="userRNO" Member="UserRNO" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="f77b251e-c90c-4e84-b337-d9860138692c" />
+      <Column Name="userBuyNum" Member="UserBuyNum" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="31a9e3ff-21e4-4f68-9cc8-610a496b46d3" />
+      <Column Name="postID" Member="PostID" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="611cf950-263b-4d50-a898-d09b3124465f" />
+      <Column Name="codeType" Member="CodeType" Type="System.Int64" DbType="INTEGER" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="809c8922-e5f1-480e-b258-a22e47b2d5fd" />
+      <Column Name="ModefiedTime" Type="System.String" DbType="TEXT" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="5dc32c62-e727-4229-9a01-2957955aab6d" />
+      <Column Name="IsDownloadAllBuyRecord" Type="System.Int64" DbType="INTEGER NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="0" ed:ValidateRequired="true" ed:Guid="e52d3c6a-e483-4672-92d9-9c621524aa4e" />
+    </Type>
+  </Table>
+  <Table Name="&quot;main&quot;.ProductPrizeCalculateInfo" Member="ProductPrizeCalculateInfos">
+    <Type Name="ProductPrizeCalculateInfo" ed:Guid="4f76b829-c9cd-417f-bd3b-2c97ba03cffc">
+      <Column Name="&quot;RowID&quot;" Member="RowID" Type="System.Int64" AutoSync="OnInsert" DbType="INTEGER NOT NULL" IsReadOnly="true" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" ed:ValidateRequired="true" ed:Guid="05ecbb63-7067-446d-84df-005191922a59" />
+    </Type>
+  </Table>
+</Database>

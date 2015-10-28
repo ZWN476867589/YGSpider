@@ -32,6 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Devart.Data.Linq, Version=4.5.859.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.SqlServer.Linq, Version=4.5.859.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Extensions" />
@@ -48,9 +50,15 @@
     <Compile Include="UtilTools\LoggerHelper.cs" />
     <Compile Include="UtilTools\NetHelper.cs" />
     <Compile Include="UtilTools\SystemHelper.cs" />
-    <Compile Include="YGInfos\ApiDataBaseInfo.cs" />
-    <Compile Include="YGInfos\ProductPrizeInfo.cs" />
-    <Compile Include="YGInfos\ProductType.cs" />
+    <Compile Include="YGInfos\ProductPrizeInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="YGInfos\ProductType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="YGInfos\SellProductBaseInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="YGSpiderDcoument.txt" />

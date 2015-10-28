@@ -61,8 +61,8 @@ namespace YGSpider.App
                 var data = JsonHelper.JsonToDictionary(res);
                 if (data != null)
                 {
-                    ApiDataBaseInfo baseInfo = new ApiDataBaseInfo();
-                    EntityHelper.setPropertiseValue<ApiDataBaseInfo>(data, baseInfo);
+                    SellProductBaseInfo baseInfo = new SellProductBaseInfo();
+                    EntityHelper.setPropertiseValue<SellProductBaseInfo>(data, baseInfo);
                     if (product.RecordCount != baseInfo.totalCount)
                     {
                         string updateStr = "update ProductType set RecordCount = " + baseInfo.totalCount + ", ModefiedTime='" + DateTime.Now.ToString() + "' where ProductTypeID=" + product.ProductTypeID;
@@ -92,8 +92,8 @@ namespace YGSpider.App
                     var data = JsonHelper.JsonToDictionary(res);
                     if (data != null)
                     {
-                        ApiDataBaseInfo baseInfo = new ApiDataBaseInfo();
-                        EntityHelper.setPropertiseValue<ApiDataBaseInfo>(data, baseInfo);
+                        SellProductBaseInfo baseInfo = new SellProductBaseInfo();
+                        EntityHelper.setPropertiseValue<SellProductBaseInfo>(data, baseInfo);
                         foreach (Dictionary<string, object> dict in baseInfo.listItems)
                         {
                             ProductPrizeInfo prizeInfo = new ProductPrizeInfo();
@@ -124,16 +124,16 @@ namespace YGSpider.App
                     DateTime time = DateTime.Now;
                     SQLiteCommand cmd = new SQLiteCommand(DBHelper.SQLConn);
                     cmd.Transaction = tran;
-                    cmd.CommandText = "insert into ProductPrizeInfo values(@RowID,@ProductTypeID,@codeID,@goodsPic,@goodsName,@codePeriod,@codePrice,@raffTime,@userWeb,@userName,@userPhoto,@userAddr,@userRNO,@userBuyNum,@postID,@codeType,@ModefiedTime)";
+                    cmd.CommandText = "insert into ProductPrizeInfo values(@RowID,@ProductTypeID,@codeID,@goodsPic,@goodsName,@codePeriod,@codePrice,@raffTime,@userWeb,@userName,@userPhoto,@userAddr,@userRNO,@userBuyNum,@postID,@codeType,@ModefiedTime,@IsDownloadAllBuyRecord)";
                     cmd.Parameters.AddRange(new[]{
                     new SQLiteParameter("@RowID",null),
                     new SQLiteParameter("@ProductTypeID",product.ProductTypeID),
-                    new SQLiteParameter("@ModefiedTime",time.ToString()+"."+time.Millisecond),
+                    new SQLiteParameter("@ModefiedTime",time.ToString()+"."+time.Millisecond),                    
                     });
                     Dictionary<string, object> dictData = EntityHelper.getEntityPropertiesAndValue<ProductPrizeInfo>(prize);
                     foreach (var keyAndValue in dictData)
                     {
-                        if (keyAndValue.Key != "RowID")
+                        if (keyAndValue.Key != "RowID" && keyAndValue.Key != "ProductTypeID" && keyAndValue.Key != "ModefiedTime")
                         {
                             cmd.Parameters.AddWithValue(keyAndValue.Key, keyAndValue.Value);
                         }
