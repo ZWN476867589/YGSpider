@@ -29,7 +29,7 @@ namespace YGSpider.Business.UtilTools
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception();
             }
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace YGSpider.Business.UtilTools
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception();
             }
         }
         #endregion

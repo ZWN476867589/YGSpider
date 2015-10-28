@@ -46,6 +46,7 @@ namespace YGSpider.Business.UtilTools
                         }
                         catch (Exception ex)
                         {
+                            LoggerHelper.WriteLog("",ex,DateTime.Now);
                         }
                     }
                 }
@@ -96,7 +97,7 @@ namespace YGSpider.Business.UtilTools
                     }
                     catch (Exception ex)
                     {
-                        throw new Exception();
+                        LoggerHelper.WriteLog("", ex, DateTime.Now);
                     }
                 }
             }

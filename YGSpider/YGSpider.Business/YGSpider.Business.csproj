@@ -45,8 +45,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UtilTools\EntityHelper.cs" />
     <Compile Include="UtilTools\JsonHelper.cs" />
+    <Compile Include="UtilTools\LoggerHelper.cs" />
     <Compile Include="UtilTools\NetHelper.cs" />
     <Compile Include="UtilTools\SystemHelper.cs" />
+    <Compile Include="YGInfos\ApiDataBaseInfo.cs" />
+    <Compile Include="YGInfos\ProductPrizeInfo.cs" />
     <Compile Include="YGInfos\ProductType.cs" />
   </ItemGroup>
   <ItemGroup>
