@@ -24,7 +24,7 @@ namespace YGSpider.App
         private void ProductMenu_Click(object sender, EventArgs e)
         {
             CloseForms();
-            Products product = new Products();
+            ProductSellHistory product = new ProductSellHistory();
             product.MdiParent = this;
             product.Show();
         }     
@@ -41,7 +41,7 @@ namespace YGSpider.App
         private void BuyHistoryMenu_Click(object sender, EventArgs e)
         {
             CloseForms();
-            BuyHistory history = new BuyHistory();
+            ProductBuyHistory history = new ProductBuyHistory();
             history.MdiParent = this;
             history.Show();
         }

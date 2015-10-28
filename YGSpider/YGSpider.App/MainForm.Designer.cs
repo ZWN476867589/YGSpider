@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Menu = new System.Windows.Forms.MenuStrip();
             this.SystemMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +64,7 @@
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(116, 22);
+            this.Exit.Size = new System.Drawing.Size(152, 22);
             this.Exit.Text = "退出(&X)";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
@@ -79,15 +80,15 @@
             // ProductMenu
             // 
             this.ProductMenu.Name = "ProductMenu";
-            this.ProductMenu.Size = new System.Drawing.Size(152, 22);
-            this.ProductMenu.Text = "商品(&P)";
+            this.ProductMenu.Size = new System.Drawing.Size(164, 22);
+            this.ProductMenu.Text = "商品出售记录(&P)";
             this.ProductMenu.Click += new System.EventHandler(this.ProductMenu_Click);
             // 
             // BuyHistoryMenu
             // 
             this.BuyHistoryMenu.Name = "BuyHistoryMenu";
-            this.BuyHistoryMenu.Size = new System.Drawing.Size(152, 22);
-            this.BuyHistoryMenu.Text = "购买历史(&B)";
+            this.BuyHistoryMenu.Size = new System.Drawing.Size(164, 22);
+            this.BuyHistoryMenu.Text = "商品购买记录(&B)";
             this.BuyHistoryMenu.Click += new System.EventHandler(this.BuyHistoryMenu_Click);
             // 
             // AboutMenu
@@ -103,6 +104,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 475);
             this.Controls.Add(this.Menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.Menu;
             this.Name = "MainForm";
